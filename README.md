@@ -1,98 +1,112 @@
-# Advanced Password Strength Analyzer
+Got it 👍 — you’ve upgraded the script into a **professional GUI-based password analyzer**, but your README still describes the **old command-line version**.
 
-**Python:** 3.6+  
-**License:** MIT  
-**Project Status:** Stable  
-**Made with ❤️ by:** [leeownuh](https://github.com/leeownuh)
+Here’s an updated **README** tailored for your new GUI version (`pro_password_tool.py`) — professional, formatted, and ready for GitHub:
 
 ---
 
-## 📘 OVERVIEW
-The Advanced Password Strength Analyzer is a Python-based command-line tool that evaluates the strength of passwords using entropy calculations and pattern-based checks. It guides users toward creating stronger passwords through real-time analysis and helpful security suggestions.
+# 🔐 Pro Password Auditor (Advanced GUI Tool)
+
+**Language:** Python 3.8+
+**License:** MIT
+**Status:** ✅ Stable
+**Author:** [leeownuh](https://github.com/leeownuh)
+**Made with ❤️ for Security Enthusiasts**
+
+---
+
+## 🧩 OVERVIEW
+
+The **Pro Password Auditor** is a **professional-grade graphical tool** that helps users analyze and strengthen passwords through **entropy-based scoring**, **pattern detection**, and **policy compliance checks**.
+It visualizes password strength in real time using **graphs, heatmaps, and interactive feedback**, empowering users to understand how secure their passwords truly are.
 
 ---
 
 ## ⚙️ FEATURES
-- Calculates entropy to measure password unpredictability.
-- Detects uppercase, lowercase, digits, and symbols.
-- Flags common or weak passwords instantly.
-- Provides clear color-coded feedback using the 'colorama' library.
-- Offers dynamic improvement suggestions for stronger passwords.
 
----
-
-## 🧠 HOW IT WORKS
-The tool uses the Shannon Entropy formula to determine password strength:
-
-```
-Entropy = password_length × log2(character_set_size)
-```
-
-### Entropy Ranges:
-| Entropy (bits) | Strength     |
-|----------------|---------------|
-| < 28           | Very Weak     |
-| 28–35          | Weak          |
-| 36–59          | Moderate      |
-| 60–79          | Strong        |
-| ≥ 80           | Very Strong   |
+* 📊 **Entropy Calculation:** Uses Shannon Entropy to quantify password randomness.
+* 🚦 **Dynamic Strength Classification:** Instant rating — Very Weak → Very Strong.
+* 🔍 **Pattern Recognition:** Detects keyboard sequences, years, common passwords, and repeated characters.
+* 🧠 **Smart Improvement Suggestions:** Suggests stronger password alternatives with leet transformations, added symbols, or random inserts.
+* 🔒 **Policy Checker:** Adjustable corporate-grade policy (min length, required character types, etc.).
+* 📈 **Entropy Growth Graph:** Live visualization of entropy as you type.
+* 🎨 **Heatmap Visualization:** Color-coded per-character complexity insight.
+* 🧾 **Bulk Password Analyzer:** Analyze hundreds of passwords from a file and export CSV results.
+* 💾 **Session Logging & Export:** Keep a history of all tests and export them in text or CSV format.
+* 🌙 **Dark/Light Mode:** Seamless theme switching for comfort.
+* 🧰 **Clipboard Safety:** Optional auto-clear feature after copy for privacy.
 
 ---
 
 ## 🖥️ USAGE
-To run the program:
 
-```
-python password_strength_analyzer.py
-```
+### ▶️ Run the program:
 
-When prompted, enter any password to analyze:
-
-```
-Enter a password (or type 'exit' to quit): MyP@ssw0rd2025!
+```bash
+python pro_password_tool.py
 ```
 
-### Example Output:
-```
-🔒 Strength: Strong
-🔢 Entropy: 74.6 bits
-Notes/Suggestions:
-- Consider adding more symbols for extra complexity.
-```
+### 💡 Main Functions:
 
-Type 'exit' to quit the program.
+* Type or paste a password → Instant analysis.
+* View **strength**, **entropy**, and **estimated crack time**.
+* Explore **patterns**, **policy results**, and **entropy graph**.
+* Click **Generate Strong** to auto-create a secure password.
+* **Double-click** on suggested passwords to copy them instantly.
+* Use **Export Session CSV** or **Save Graph Snapshot** to record results.
 
 ---
 
-## 📦 INSTALLATION & REQUIREMENTS
+## 🧮 ENTROPY REFERENCE
+
+| Entropy (bits) | Classification | Example Crack Time (@1e9 guesses/sec) |
+| -------------- | -------------- | ------------------------------------- |
+| < 28           | 🔴 Very Weak   | Instant                               |
+| 28–35          | 🟠 Weak        | Seconds–Minutes                       |
+| 36–59          | 🟡 Moderate    | Hours–Days                            |
+| 60–79          | 🟢 Strong      | Years                                 |
+| ≥ 80           | 🟣 Very Strong | Thousands of Years                    |
+
+---
+
+## 📦 INSTALLATION
+
 ### Requirements:
-- Python 3.6 or higher
-- colorama library
 
-Install the required dependency using:
+* Python 3.8 or higher
+* Required libraries:
 
-```
-pip install colorama
-```
+  ```bash
+  pip install matplotlib
+  ```
+
+*(Tkinter comes preinstalled with most Python distributions.)*
 
 ---
 
 ## 📁 PROJECT STRUCTURE
+
 ```
-PasswordStrengthAnalyzer/
- ┣ password_strength_analyzer.py
- ┣ README.txt
+ProPasswordAuditor/
+ ┣ pro_password_tool.py
+ ┣ README.md
  ┗ LICENSE
 ```
 
 ---
 
-## 👨‍💻 AUTHOR
-**Created by:** [Ownuh](https://github.com/leeownuh)  
-**Role:** Cybersecurity Enthusiast & Developer  
-**Quote:** "Security begins with awareness — even in your passwords."
+## 🧑‍💻 AUTHOR
+
+**Created by:** [Ownuh (Leona Kokerai)](https://github.com/leeownuh)
+**Field:** Cybersecurity & Software Development
+**Quote:** *“Passwords are the first defense — make them unbreakable.”*
 
 ---
 
-## 📜 LICENSE
-This project is licensed under the MIT License. You are free to use, modify, and distribute it with proper credit.
+## 🪪 LICENSE
+
+This project is distributed under the **MIT License**.
+You’re free to use, modify, and distribute this tool with proper attribution.
+
+---
+
+Would you like me to also make a **GitHub-ready version** with badges (e.g., Python version, license, stars, repo size)?

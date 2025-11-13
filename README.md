@@ -2,7 +2,7 @@
 
 ---
 
-# 🔐 Ownuh SecurePass Analyzer (Advanced GUI Tool)
+# 🔐 Ownuh SecurePass Analyzer 
 
 **Language:** Python 3.8+  
 **License:** MIT  

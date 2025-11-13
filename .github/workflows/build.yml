@@ -3,7 +3,7 @@ name: Build and Release Ownuh SecurePass Analyzer
 on:
   push:
     tags:
-      - "v*"   # e.g., v1.0.0
+      - "v*"  # e.g., v1.0.0
 
 permissions:
   contents: write
@@ -16,7 +16,8 @@ jobs:
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -26,14 +27,13 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pyinstaller
-          pip install -r requirements.txt
+          pip install pyinstaller -r requirements.txt
 
       - name: Build Ownuh SecurePass Analyzer
         shell: pwsh
         run: |
-          $addData = if ($env:RUNNER_OS -eq 'Windows') { "images/logo.png;images" } else { "images/logo.png:images" }
-          python -m PyInstaller --noconfirm --clean --onefile --windowed --add-data "$addData" --icon=assets/app.ico ownuh_securepass_analyzer.py
+          $add_data = if ($env:RUNNER_OS -eq 'Windows') { "images/logo.png;images" } else { "images/logo.png:images" }
+          python -m PyInstaller --noconfirm --clean --onefile --windowed --add-data "$add_data" --icon=assets/app.ico ownuh_securepass_analyzer.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -59,7 +59,6 @@ jobs:
           body: |
             🔐 **Ownuh SecurePass Analyzer**
             Smart password analysis and audit tool by Leona Kokerai.
-
             Includes:
             - Windows `.exe`
             - macOS `.app`

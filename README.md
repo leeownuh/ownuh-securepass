@@ -1,7 +1,5 @@
 
----
 
-````markdown
 ---
 
 # 🔐 Ownuh SecurePass Analyzer (Advanced GUI Tool)
